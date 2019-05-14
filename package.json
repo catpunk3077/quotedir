@@ -2,10 +2,10 @@
   "name": "Quote_Dir",
   "version": "0.0.1",
   "description": "",
-  "main": "main.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node main.js",
-    "test": "nodemon main.js"
+    "start": "node server.js",
+    "test": "nodemon server.js"
   },
   "keywords": [],
   "author": "FOAMMY97",
