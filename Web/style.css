@@ -1,0 +1,309 @@
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400i");
+
+/*All Screen Resolution Properties*/
+
+/*Global Properties*/
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+/*<body> tag properties*/
+body
+{
+    font-family: 'IBM Plex Mono', monospace;
+    background-color: #000000;
+    color:#ffffff;
+}
+
+/*.bg class properties*/
+.bg
+{
+    position: relative;
+    height:100vh;
+    overflow: hidden;
+    
+}
+
+.bg::after
+{
+    content:"";
+    background: url('./img/img1.jpg');
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    opacity:0.2;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index:-1;
+}
+
+/*.content class properties*/
+.content
+{
+    width:100%;
+}
+
+.content .quote
+{
+    display: flex;
+    justify-content:center;
+    flex-direction:column;
+    height:85vh;
+}
+
+.content .quote h1
+{
+    text-align:center;
+    font-style: italic;
+    color: #ffffff;
+    animation-name: quote;
+    animation-duration: 3s;
+}
+
+.content .quote h2
+{
+    text-align:center;
+    font-style: italic;
+    color: #ffffff;
+    animation-name: quote;
+    animation-duration: 6s;
+}
+
+.content .quote p
+{
+    text-align:center;
+    font-style: italic;
+    color: #babdb6;
+    animation-name: quote;
+    animation-duration: 6s;
+}
+
+/*.nav class Properties*/
+.nav
+{
+    text-align:center;
+}
+.nav li
+{
+    display: inline;
+    font-weight: bold;
+}
+
+.nav li a
+{
+    position: relative;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.nav li a:before
+{
+    position: absolute;
+    content:"";
+    background-color: #ffffff;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.1s ease-in-out 0s;
+}
+
+.nav li a:hover:before
+{
+    /*text-decoration: underline;*/
+    visibility: visible;
+    transform: scaleX(1);
+    transition: all 0.1s ease-in-out 0s;
+}
+
+/*<footer> tag properties*/
+footer
+{
+    text-align: center;
+    color: #babdb6;
+    animation-name: navbar;
+    animation-delay: 2s;
+    animation-duration: 2s;
+}
+
+
+/*240px screen properties (0px - 319px)*/
+@media only screen and (min-width: 0px)
+{
+    .content .quote h1
+    {
+        font-size: 13px;
+    }
+
+    .content .quote h2
+    {
+        font-size: 10px;
+        line-height: 2em;
+    }
+
+    .content .quote p
+    {
+        font-size: 10px;
+        line-height: 2em;
+    }
+
+
+    .nav li
+    {
+        margin: 0 0.2em 0 0.2em;
+        font-size: 13px;
+    }
+
+    footer
+    {
+        font-size: 13px;
+        line-height: 1em;
+    }
+
+    .nav li a:before
+    {
+        height: 1px;
+    }
+
+}
+
+/*320px screen properties (320px - 369px)*/
+@media only screen and (min-width: 320px)
+{
+
+    .content .quote h1
+    {
+        font-size: 15px;
+    }
+
+    .content .quote h2
+    {
+        font-size: 12px;
+        line-height: 3em;
+    }
+
+    .content .quote p
+    {
+        font-size: 12px;
+        line-height: 3em;
+    }
+
+    .nav li
+    {
+        margin: 0 0.5em 0 0.5em;
+        font-size: 15px;
+    }
+
+    footer
+    {
+        line-height: 3em;
+    }
+
+    .nav li a:before
+    {
+        height: 2px;
+    }
+}
+
+/*370px screen properties (370px - 767px)*/
+@media only screen and (min-width: 370px)
+{
+
+    .content .quote h1
+    {
+        font-size: 15px;
+    }
+
+    .content .quote h2
+    {
+        font-size: 14px;
+    }
+
+    .content .quote p
+    {
+        font-size: 14px;
+    }
+
+    .nav li
+    {
+        font-size: 18px;
+    }
+
+    footer
+    {
+        font-size: 15px;
+    }
+}
+
+/*370px screen properties (768px - 1023px)*/
+@media only screen and (min-width: 768px)
+{
+
+    .content .quote h1
+    {
+        font-size: 25px;
+    }
+
+    .content .quote h2
+    {
+        font-size: 18px;
+    }
+
+    .content .quote p
+    {
+        font-size:18px;
+    }
+
+    .nav li
+    {
+        font-size:20px;
+    }
+}
+
+/*1024px screen properties (1024px >>)*/
+@media only screen and (min-width: 1024px)
+{
+
+    .content .quote h1
+    {
+        font-size: 35px;
+    }
+
+    .content .quote h2
+    {
+        font-size: 20px;
+    }
+
+    .content .quote p
+    {
+        font-size:20px;
+    }
+
+    .nav li a:before
+    {
+        height: 3px;
+    }
+}
+
+/*CSS Animation keyframes*/
+
+@keyframes quote
+{
+    0%
+    {
+        opacity: 0;
+    }
+
+    100%
+    {
+        opacity: 10;
+    }
+}
