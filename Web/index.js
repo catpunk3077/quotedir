@@ -117,7 +117,7 @@ about.addEventListener('click', function()
 
 random.addEventListener('click', function()
 {
-    let index = Math.floor(Math.random()*7);
+    let index = Math.floor(Math.random()*20);
     q.innerHTML = "<h1>" + quotes.quotes[index].quote + "</h1>" +"<p>" + quotes.quotes[index].author + "</p>";
 });
 
